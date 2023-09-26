@@ -11,6 +11,13 @@ const displayMessage = () => {
 }
 
 // using ES6 Syntax
-const Hello = () => <h1>Hello React { name } {displayMessage()}</h1> // jsx example 1
+const Hello = () => {
+    return(
+    <>
+        <h1>Hello React { name } </h1>
+        <p>{displayMessage()}</p>
+    </>
+    )
+} // jsx example 1
 
 export default Hello
