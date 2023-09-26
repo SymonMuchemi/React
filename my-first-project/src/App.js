@@ -1,13 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-import Message from './components/Message';
-import Hello from './components/Hello';
+import Profile from './components/Profile';
 
 function App() {
   return (
     <div className="App">
-      <Message/>
-      <Hello/>      
+        <Profile name="Symon" lastName="Powell">
+            <h3>This is a personal profile</h3>
+        </Profile>
+        <Profile name="Jordan" lastName="Spark">
+            <h3>This is another profile</h3>
+        </Profile>
     </div>
   );
 }
