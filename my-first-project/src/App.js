@@ -22,7 +22,7 @@ export default function App(){
     <>
       <h1>{ advice }</h1>
       <button onClick={ getAdvice }>Get Advice</button>
-      <Message count={count}/>      
+      <Message count={count}/>
     </>
   )
 }
