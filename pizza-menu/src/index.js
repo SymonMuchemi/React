@@ -14,8 +14,17 @@ function App() {
 }
 
 const Header = () => {
+    const headerStyles = { 
+        color: "#AAD",
+        fontSize: "42px",
+        fontWeight: "400",
+        textTransform: "capitalize"
+    }
+
     return (
-        <h1>Fast React Pizza Co.</h1>
+        <h1 style={headerStyles}>
+            Fast React pizza Co.
+        </h1>
     )
 }
 
@@ -60,7 +69,7 @@ function Pizza(props) {
     let lowerCaseImageName = image.toLowerCase();
     let noPizzaName = lowerCaseImageName.replace("pizza", "");
     let noSpaceImageName = noPizzaName.replace(" ", "");
-    
+
     console.log("Image name: " + noSpaceImageName)
     console.log(data[props.intProp].name)
 
