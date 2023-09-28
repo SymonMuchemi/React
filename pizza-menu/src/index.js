@@ -57,7 +57,13 @@ function App(){
 }
 
 function Pizza(){
-    return <h2>Pizza</h2>
+    console.log(pizzaData[2].name)
+    return (
+        <div>
+            <h2>{pizzaData[2].name}</h2>
+            <p>{pizzaData[2].ingredients}</p>
+        </div>
+    )
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
