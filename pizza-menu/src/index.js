@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
+import './index.css';
 import data from './pizzaData.js'
 
 function App() {
     return (
-        <div>
+        <div className='container'>
             <Header />
             <Menu />
             <Footer />
@@ -14,17 +14,19 @@ function App() {
 }
 
 const Header = () => {
-    const headerStyles = { 
+    /*const headerStyles = { 
         color: "#AAD",
         fontSize: "42px",
         fontWeight: "400",
         textTransform: "capitalize"
-    }
+    }*/
 
     return (
-        <h1 style={headerStyles}>
-            Fast React pizza Co.
-        </h1>
+        <header className='header'>
+            <h1>
+                Fast React pizza Co.
+            </h1>
+        </header>
     )
 }
 
@@ -45,20 +47,22 @@ const Footer = () => {
     }
 
     return (
-        <footer>{time}: {shopText}</footer>
+        <footer className='footer'>{time}: {shopText}</footer>
     )
 }
 
 const Menu = () => {
     return (
         <>
-            <h2>Our menu</h2>
-            <Pizza intProp={0} />
-            <Pizza intProp={1} />
-            <Pizza intProp={2} />
-            <Pizza intProp={3} />
-            <Pizza intProp={4} />
-            <Pizza intProp={5} />
+            <main className='menu'>
+                <h2>Our menu</h2>
+                <Pizza intProp={0} />
+                <Pizza intProp={1} />
+                <Pizza intProp={2} />
+                <Pizza intProp={3} />
+                <Pizza intProp={4} />
+                <Pizza intProp={5} />
+            </main>
         </>
     )
 }
@@ -76,7 +80,7 @@ function Pizza(props) {
     return (
         <div>
             <img src={`pizzas/${noSpaceImageName}.jpg`} alt='pizza spinaci' />
-            <h2>{data[index].name}</h2>
+            <h3>{data[index].name}</h3>
             <p>{data[index].ingredients}</p>
         </div>
     )
