@@ -24,14 +24,14 @@ const Footer = () => {
     let openingHour = 9;
     let closingHour = 22;
     let currentHour = new Date().getHours();
-    let isOpen = (currentHour <= closingHour 
-                    && currentHour >= openingHour)
+    let isOpen = (currentHour <= closingHour
+        && currentHour >= openingHour)
     let shopText;
 
-    if (isOpen){
+    if (isOpen) {
         shopText = "We are currently open.";
     }
-    else{
+    else {
         shopText = "We are currently close.";
     }
 
@@ -44,19 +44,21 @@ const Menu = () => {
     return (
         <>
             <h2>Our menu</h2>
-            <Pizza />
-            <Pizza />
+            <Pizza intProp={2} />
+            <Pizza intProp={3} />
+            <Pizza intProp={0} />
         </>
     )
 }
 
 function Pizza(props) {
-    console.log(data[2].name)
+    console.log(data[props.intProp].name)
+    let index = props.intProp;
     return (
         <div>
             <img src='pizzas/spinaci.jpg' alt='pizza spinaci' />
-            <h2>{data[2].name}</h2>
-            <p>{data[2].ingredients}</p>
+            <h2>{data[index].name}</h2>
+            <p>{data[index].ingredients}</p>
         </div>
     )
 }
