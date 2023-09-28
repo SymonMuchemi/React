@@ -44,19 +44,29 @@ const Menu = () => {
     return (
         <>
             <h2>Our menu</h2>
+            <Pizza intProp={0} />
+            <Pizza intProp={1} />
             <Pizza intProp={2} />
             <Pizza intProp={3} />
-            <Pizza intProp={0} />
+            <Pizza intProp={4} />
+            <Pizza intProp={5} />
         </>
     )
 }
 
 function Pizza(props) {
-    console.log(data[props.intProp].name)
     let index = props.intProp;
+    let image = data[index].name;
+    let lowerCaseImageName = image.toLowerCase();
+    let noPizzaName = lowerCaseImageName.replace("pizza", "");
+    let noSpaceImageName = noPizzaName.replace(" ", "");
+    
+    console.log("Image name: " + noSpaceImageName)
+    console.log(data[props.intProp].name)
+
     return (
         <div>
-            <img src='pizzas/spinaci.jpg' alt='pizza spinaci' />
+            <img src={`pizzas/${noSpaceImageName}.jpg`} alt='pizza spinaci' />
             <h2>{data[index].name}</h2>
             <p>{data[index].ingredients}</p>
         </div>
