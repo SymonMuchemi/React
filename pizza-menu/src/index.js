@@ -8,7 +8,7 @@ function App() {
         <div>
             <Header />
             <Pizza />
-            <Pizza />
+            <Footer />
         </div>
     )
 }
@@ -16,6 +16,12 @@ function App() {
 const Header = () => {
     return (
         <h1>Fast React Pizza Co.</h1>
+    )
+}
+
+const Footer = () => {
+    return (
+        <footer>{new Date().toLocaleTimeString()}:   We are currently open.</footer>
     )
 }
 
