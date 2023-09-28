@@ -6,10 +6,16 @@ import data from './pizzaData.js'
 function App() {
     return (
         <div>
-            <h1>Hello React</h1>
+            <Header />
             <Pizza />
             <Pizza />
         </div>
+    )
+}
+
+const Header = () => {
+    return (
+        <h1>Fast React Pizza Co.</h1>
     )
 }
 
@@ -18,7 +24,7 @@ function Pizza(props) {
     return (
         <div>
             <img src='pizzas/spinaci.jpg' alt='pizza spinaci' />
-            <h2>{data[4].name}</h2>
+            <h2>{data[2].name}</h2>
             <p>{data[2].ingredients}</p>
         </div>
     )
