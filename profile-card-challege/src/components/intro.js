@@ -1,6 +1,9 @@
 const Intro = (props) => {
     return(
-        <p>{props.description}</p>
+        <>
+            <h1>Simon Muchemi</h1>
+            <p className="introduction">{props.description}</p>
+        </>
     )
 } 
 

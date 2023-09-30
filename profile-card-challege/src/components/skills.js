@@ -10,10 +10,9 @@ const Skill = (props) => {
     )
 }
 
-const Skilllist = (props) => {
+const Skilllist = () => {
     
     return (
-        <>
             <div className="skills">
                 <Skill skillName='HTML + CSS' Skillcolor='#2763EA'/>
                 <Skill skillName='JavaScript' Skillcolor='#EED91D'/>
@@ -21,9 +20,7 @@ const Skilllist = (props) => {
                 <Skill skillName='Java' Skillcolor='#262639'/>
                 <Skill skillName='Spring Boot' Skillcolor='#6CB43C'/>
                 <Skill skillName='Git + GitHub' Skillcolor='#E84E32'/>
-            </div>
-    
-        </>
+            </div>    
     )
 }
 
