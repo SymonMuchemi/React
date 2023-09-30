@@ -1,16 +1,16 @@
-import Pizza from "./pizza";
+import Pizza from './pizza';
+import data from '../pizzaData'
 
 const Menu = () => {
     return (
         <>
             <main className='menu'>
                 <h2>Our menu</h2>
-                <Pizza intProp={0} />
-                <Pizza intProp={1} />
-                <Pizza intProp={2} />
-                <Pizza intProp={3} />
-                <Pizza intProp={4} />
-                <Pizza intProp={5} />
+                <div>
+                    {data.map((pizza) => (
+                        <Pizza pizzaObj={pizza}/>
+                    ))}
+                </div>
             </main>
         </>
     )
