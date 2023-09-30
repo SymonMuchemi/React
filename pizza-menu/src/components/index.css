@@ -153,6 +153,9 @@ body {
 
 .footer {
   font-size: 1.4rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 .order {
@@ -163,6 +166,8 @@ body {
 }
 
 .btn {
+  margin: auto;
+  margin-top: 20px;
   color: inherit;
   font-family: inherit;
   border: none;

@@ -1,21 +1,24 @@
 const Footer = () => {
-    const time = new Date().toLocaleTimeString();
     let openingHour = 9;
     let closingHour = 22;
     let currentHour = new Date().getHours();
     let isOpen = (currentHour <= closingHour
         && currentHour >= openingHour)
-    let shopText;
-
-    if (isOpen) {
-        shopText = "We are currently open.";
-    }
-    else {
-        shopText = "We are currently close.";
-    }
 
     return (
-        <footer className='footer'>{time}: {shopText}</footer>
+        <footer className='footer'>
+            {
+                isOpen && 
+                        (
+                        <div className='footer'>
+                            <p>
+                                We're open untill {closingHour}:00. Come visit us or order online
+                            </p>
+                            <button className='btn'>Order</button>
+                        </div>
+                        )
+            }
+        </footer>
     )
 }
 
