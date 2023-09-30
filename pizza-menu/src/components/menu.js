@@ -6,11 +6,11 @@ const Menu = () => {
         <>
             <main className='menu'>
                 <h2>Our menu</h2>
-                <div>
+                <ul className='pizzas'>
                     {data.map((pizza) => (
-                        <Pizza pizzaObj={pizza}/>
+                        <Pizza pizzaObj={pizza} key={pizza.name}/>
                     ))}
-                </div>
+                </ul>
             </main>
         </>
     )
