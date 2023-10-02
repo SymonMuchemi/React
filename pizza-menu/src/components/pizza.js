@@ -1,5 +1,7 @@
 function Pizza(props) {
-    console.log(props)
+    console.log(props);
+
+    if (props.pizzaObj.soldOut) return null; 
 
     return (
         <li className='pizza'>
@@ -7,7 +9,7 @@ function Pizza(props) {
             <div>
                 <h3>{props.pizzaObj.name}</h3>
                 <p>{props.pizzaObj.ingredients}</p>
-                <span>{props.pizzaObj.price}</span>
+                <span>Ksh {props.pizzaObj.price + "00"}</span>
             </div>
         </li>
     )
