@@ -1,15 +1,15 @@
 function Pizza({pizzaObj}) {
     console.log(pizzaObj);
 
-    if (pizzaObj.soldOut) return null;
+    // if (pizzaObj.soldOut) return null;
 
     return (
-        <li className='pizza'>
+        <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
             <img src={`${pizzaObj.photoName}`} alt=" " />
             <div>
                 <h3>{pizzaObj.name}</h3>
                 <p>{pizzaObj.ingredients}</p>
-                <span>Ksh {pizzaObj.price + "00"}</span>
+                <span>{pizzaObj.soldOut ? "SOLD OUT" : "Ksh " + pizzaObj.price + "00"}</span>
             </div>
         </li>
     )
