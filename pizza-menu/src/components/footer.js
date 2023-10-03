@@ -1,5 +1,7 @@
+import Order from "./button";
+
 const Footer = () => {
-    let openingHour = 19;
+    let openingHour = 9;
     let closingHour = 22;
     let currentHour = new Date().getHours();
     let isOpen = (currentHour <= closingHour
@@ -13,15 +15,9 @@ const Footer = () => {
 
     return (
         <footer className='footer'>
-            {   isOpen ? (
-                    <div className='footer'>
-                        <p>
-                            We're open untill {closingHour}:00. Come visit us or order online.
-                        </p>
-                        <button className='btn'>Order</button>
-                    </div>
-                ) : <p>We are happy to welcome you between <strong>{openingHour}:00</strong>  and <strong>{closingHour}:00</strong>. </p>
-            }
+            {   isOpen ? <Order closingHour={closingHour}/> :
+                <p>We are happy to welcome you between <strong>{openingHour}:00</strong>  and <strong>{closingHour}:00</strong>. </p>
+                }
         </footer>
     )
 }
