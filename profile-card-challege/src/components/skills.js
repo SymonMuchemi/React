@@ -1,16 +1,16 @@
 import myData from "./data";
 
-const Skill = ({skillObj}) => {
+const Skill = ({skill, color, level}) => {
     const style = {
-        backgroundColor: `${skillObj.color}`
+        backgroundColor: `${color}`
     }
     return (
         <div className="skill" style={style}>
-            <p>{skillObj.skill} {
-                skillObj.level === "Skilled" ? `💪` 
-                    : skillObj.level === "intermediate" ? `👍` 
-                        : skillObj.level === 'beginner' ? `👶`
-                            : ""}</p>
+            <p>{skill} 
+            {level === "Skilled" && "💪"}
+            {level === "intermediate" && "👍"}
+            {level === "beginner" && "👶"}
+            </p>
         </div>
 
     )
@@ -21,7 +21,7 @@ const SkillList = () => {
     return (
             <div className="skills">
                 { myData.skills.map((skill) => (
-                    <Skill skillObj={skill} key={skill.skill}/>
+                    <Skill skill={skill.skill} color={skill.color} level={skill.level} key={skill.skill}/>
                 ) )}
             </div>
     )

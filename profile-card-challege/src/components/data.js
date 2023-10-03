@@ -29,7 +29,7 @@ const myData = {
             skill: "Git + GitHub",
             level: "intermediate",
             color: "#E84E32"
-        },
+        }
     ]
 }
 
