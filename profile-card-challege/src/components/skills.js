@@ -7,9 +7,9 @@ const Skill = ({skillObj}) => {
     return (
         <div className="skill" style={style}>
             <p>{skillObj.skill} {
-                skillObj.level == "Skilled" ? `💪` 
-                    : skillObj.level == "intermediate" ? `👍` 
-                        : skillObj.level == 'beginner' ? `👶`
+                skillObj.level == ="Skilled" ? `💪` 
+                    : skillObj.level === "intermediate" ? `👍` 
+                        : skillObj.level === 'beginner' ? `👶`
                             : ""}</p>
         </div>
 
