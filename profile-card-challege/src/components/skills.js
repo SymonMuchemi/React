@@ -7,7 +7,7 @@ const Skill = ({skillObj}) => {
     return (
         <div className="skill" style={style}>
             <p>{skillObj.skill} {
-                skillObj.level == ="Skilled" ? `💪` 
+                skillObj.level === "Skilled" ? `💪` 
                     : skillObj.level === "intermediate" ? `👍` 
                         : skillObj.level === 'beginner' ? `👶`
                             : ""}</p>
@@ -16,15 +16,15 @@ const Skill = ({skillObj}) => {
     )
 }
 
-const Skill_list = () => {
+const SkillList = () => {
     
     return (
             <div className="skills">
-                { myData.skills.map((skill) => {
+                { myData.skills.map((skill) => (
                     <Skill skillObj={skill} key={skill.skill}/>
-                } )}
+                ) )}
             </div>
     )
 }
 
-export default Skill_list;
+export default SkillList;
