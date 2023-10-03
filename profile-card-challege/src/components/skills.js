@@ -1,28 +1,26 @@
-const Skill = (props) => {
+import myData from "./data";
+
+const Skill = ({skillObj}) => {
     const style = {
-        backgroundColor: `${props.Skillcolor}`
+        backgroundColor: `${skillObj.color}`
     }
     return (
         <div className="skill" style={style}>
-            <p>{props.skillName} {props.emoji}</p>
+            <p>{skillObj.skill} {skillObj.level == "Skilled" ? }</p>
         </div>
 
     )
 }
 
-const Skilllist = () => {
+const Skill_list = () => {
     
     return (
             <div className="skills">
-                <Skill skillName='HTML + CSS' Skillcolor='#2763EA' emoji={`💪`}/>
-                <Skill skillName='C Programming' Skillcolor='#094A87'emoji={`😎`}/>
-                <Skill skillName='JavaScript' Skillcolor='#EED91D' emoji={`💪`}/>
-                <Skill skillName='React' Skillcolor='#60DAFB' emoji={`💪`}/>
-                <Skill skillName='Java' Skillcolor='#262639'emoji={`👍`}/>
-                <Skill skillName='Spring Boot' Skillcolor='#6CB43C' emoji='😎'/>
-                <Skill skillName='Git + GitHub' Skillcolor='#E84E32' emoji={`🤩`}/>
-            </div>    
+                { myData.skills.map((skillObj) => {
+                    <Skill
+                } )}
+            </div>
     )
 }
 
-export default Skilllist;
+export default Skill_list;

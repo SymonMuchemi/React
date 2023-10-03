@@ -1,29 +1,33 @@
 const myData = {
-    name: "Simon Muchemi",
-    description: "I'm a fullstack web developer skilled in react JS and spring boot. When I'm not coding I love cycling, hiking, reading novels and watching movies.",
     skills: [
         {
             skill: "HTML + CSS",
+            level: "Skilled",
             color: "#2763EA"
         },
         {
             skill: "JavaScript",
+            level: "Skilled",
             color: "#EED91D"
         },
         {
             skill: "React",
+            level: "beginner",
             color: "#60DAFB"
         },
         {
             skill: "Java",
+            level: "Skilled",
             color: "#262639"
         },
         {
             skill: "Spring Boot",
+            level: "beginner",
             color: "#6CB43C"
         },
         {
             skill: "Git + GitHub",
+            level: "intermediate",
             color: "#E84E32"
         },
     ]
